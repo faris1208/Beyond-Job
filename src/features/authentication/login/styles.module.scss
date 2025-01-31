@@ -1,0 +1,131 @@
+@import "../../../styles/index.scss";
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .signup_container {
+        width: 50%;
+        margin: 0 auto;
+        padding: 2rem 0;
+        border-radius: 5px;
+        background-color: #f3f3f3;
+        // border: 2px solid yellowgreen;
+
+        @include responsive("mobile") {
+          width: 95%;
+          margin: 0 auto;
+        }
+        .get_started {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 1rem;
+          text-align: center;
+          gap: 5px;
+
+          h2{
+            font-size: 25px;
+            font-weight: bolder;
+            font-style: normal;
+            color: #191A23;
+            font-family: SpaceGrotesk;
+            
+          }
+
+          span{
+            font-size: 15px;
+            font-weight: bold;
+            font-style: normal;
+            color: #191A23;
+            font-family: SpaceGrotesk;
+          }
+        }
+      }
+}
+
+.container{
+    padding: 0px 30px;
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        
+        .form_container{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            gap: 5px;
+            
+            label{
+                font-size: 22px;
+                color: #191A23;
+                font-family: SpaceGrotesk;
+            }
+
+            .input{
+                padding: 18px 10px;
+                // border: 2px solid red;
+                border-radius: 8px;
+                border: 1px dotted #191A23 ;
+                outline: none;
+                color: #191A23;
+                font-family: SpaceGrotesk;
+                font-size: 15px;
+            }
+        }
+
+        .form_button{
+
+            .button{
+                padding: 15px 0px;
+                width: 100%;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                background-color: #B9FF66;
+                color: #191A23;
+                font-family: SpaceGrotesk;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: bold;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #afff4e;
+                }
+            }
+
+            .googleButton{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
+
+                p{
+                    color: #191A23;
+                    font-family: SpaceGrotesk;
+                    font-size: 19px;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: #9cfc27;
+                    font-family: SpaceGrotesk;
+                    font-size: 19px;
+
+                    span{
+                        font-family: SpaceGrotesk;
+                    font-size: 19px;
+                    font-weight: bolder;
+                    margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

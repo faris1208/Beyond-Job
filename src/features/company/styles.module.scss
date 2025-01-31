@@ -1,0 +1,308 @@
+@import "../../styles/index.scss";
+
+.wrapper {
+  padding: 40px;
+
+  @include responsive("mobile") {
+    padding: 40px 20px;
+  }
+
+  .setup_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    h2 {
+      color: #191a23;
+      font-family: SpaceGrotesk;
+      font-size: 45px;
+      font-weight: bolder;
+
+      @include responsive("mobile") {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .form {
+    // border: 2px solid green;
+    margin-top: 40px;
+    // padding: 0px 20px;
+
+    .form_wrapper {
+      //   border: 2px solid blue;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 20px;
+
+      @include responsive("mobile") {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px 20px;
+      }
+
+      .company_form {
+        // border: 2px solid yellow;
+        display: flex;
+        flex-direction: column;
+        // margin-bottom: 20px;
+        gap: 5px;
+        width: 100%;
+
+        label {
+          font-size: 22px;
+          color: #191a23;
+          font-family: SpaceGrotesk;
+        }
+
+        input {
+          padding: 18px 10px;
+          // border: 2px solid red;
+          border-radius: 8px;
+          border: 1px dotted #191a23;
+          outline: none;
+          color: #191a23;
+          font-family: SpaceGrotesk;
+          font-size: 15px;
+        }
+
+        textarea {
+          padding: 18px 10px 40px;
+          // border: 2px solid red;
+          border-radius: 8px;
+          border: 1px dotted #191a23;
+          outline: none;
+          color: #191a23;
+          font-family: SpaceGrotesk;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .submit_button {
+      margin-top: 20px;
+
+      button {
+        padding: 15px 60px;
+        // width: 100%;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        background-color: #b9ff66;
+        color: #191a23;
+        font-family: SpaceGrotesk;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #afff4e;
+        }
+      }
+
+      @include responsive("mobile") {
+        button {
+          padding: 10px 40px;
+          // width: 100%;
+          border-radius: 8px;
+          border: none;
+          outline: none;
+          background-color: #b9ff66;
+          color: #191a23;
+          font-family: SpaceGrotesk;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: bold;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #afff4e;
+          }
+        }
+      }
+    }
+  }
+
+  .list_wrapper {
+    ul {
+        width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 20px;
+      background-color: #fff;
+      padding: 30px 20px;
+      border-radius: 10px;
+
+      @include responsive("mobile") {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        background-color: #fff;
+        padding: 30px 10px;
+        border-radius: 10px;
+      }
+
+      li {
+        width: 100%;
+        list-style: none;
+        background-color: #f3f3f3;
+        border-radius: 8px;
+        box-shadow: 0px 2px 4px 2px #0000001c;
+        padding: 20px 15px; // @include responsive("mobile") {
+        //   border: 2px solid red;
+        // }
+
+       
+
+        p {
+          margin: 10px 0px;
+          color: #191a23;
+          font-family: SpaceGrotesk;
+          font-size: 19px;
+
+          .status_approved {
+            color: green;
+            font-family: SpaceGrotesk;
+            font-weight: bold;
+          }
+
+          .status_pending {
+            font-family: SpaceGrotesk;
+            color: orange;
+            font-weight: bold;
+          }
+        }
+
+        .button_box {
+          display: flex;
+        //   align-items: center;
+          gap: 10px;
+
+          .approve_button {
+            padding: 10px 30px;
+            // width: 100%;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            background-color: #b9ff66;
+            color: #191a23;
+            font-family: SpaceGrotesk;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #afff4e;
+            }
+          }
+
+          .pending_button {
+            padding: 10px 30px;
+            // width: 100%;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            background-color: yellow;
+            color: #191a23;
+            font-family: SpaceGrotesk;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+              background-color: rgb(223, 223, 3);
+            }
+          }
+
+          .delete_button {
+            padding: 10px 30px;
+            // width: 100%;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: #191a23;
+            font-family: SpaceGrotesk;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+              background-color: rgb(233, 3, 3);
+            }
+          }
+
+          @include responsive("mobile"){
+            flex-direction: column;
+            margin-top: 30px;
+            gap: 15px;
+
+            .approve_button {
+                padding: 10px 10px;
+                // width: 100%;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                background-color: #b9ff66;
+                color: #191a23;
+                font-family: SpaceGrotesk;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: bold;
+                cursor: pointer;
+    
+                &:hover {
+                  background-color: #afff4e;
+                }
+              }
+    
+              .pending_button {
+                padding: 10px 10px;
+                // width: 100%;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                background-color: yellow;
+                color: #191a23;
+                font-family: SpaceGrotesk;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: bold;
+                cursor: pointer;
+    
+                &:hover {
+                  background-color: rgb(223, 223, 3);
+                }
+              }
+    
+              .delete_button {
+                padding: 10px 10px;
+                // width: 100%;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                background-color: red;
+                color: #191a23;
+                font-family: SpaceGrotesk;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: bold;
+                cursor: pointer;
+    
+                &:hover {
+                  background-color: rgb(233, 3, 3);
+                }
+              }
+        }
+        }
+      }
+    }
+  }
+}
